@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <style> .section {border-radius: 50%;} .products {width: 70%} body {font-family:'Courier New'} .imgButton{
+    text-align:center;
+}
+
+    * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <title>Jubay!</title>
 </head>
 <body>
+    <h1>Welcome to Jubay, your conscious shop</h1>
+    <h2>Jubay is all about conscious shopping, and making the world greener!</h2>
+    <a href=""> Get to know more about or mission, and how we are making the world into a better place!</a> 
+    <p>   </p>
+    <a href="/product">Get to know more about our products</a>
+    <p>   </p>
+    <a href="/cart">Go to your cart</a>
+    <div class="row">
+        <div class="column">
+            <img class="products" src="{{url_for('static', filename='waterbottle.jpg')}}">
+        </div>
+
+        <div class="imgButton">
+        <a href="/cart"><button type="button" onclick="add2cart()"> Add to cart </button> </a>
+        </div>
+
+        <div class="column">
+        <a href="/cart"><img class="products" src="{{url_for('static', filename='totebag.jpg')}}"></a>
+        </div>
+
+        
+
+        <div class="column">
+        <a href="/cart"><img class="products" src="{{url_for('static', filename='toothbrush.jpeg')}}">
+        </div>
+
+        
+        <div class="column">
+            <img class="products" src="{{url_for('static', filename='soap.jpeg')}}">
+        </div>
+
+        
+
+    </div>
+    <h3>What do you need?</h3>
+    <a href=""><img class="section" src="{{url_for('static', filename='hygiene.jpeg')}}"></a>
+    <a href=""><img class="section" src="{{url_for('static', filename='kitchen.jpeg')}}"></a>
+    <a href=""><img class="section" src="{{url_for('static' , filename='stationery.jpeg')}}"></a>
 
 </body>
 </html>
